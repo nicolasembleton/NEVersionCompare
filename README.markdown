@@ -1,11 +1,14 @@
-NEVersionCompare, A tiny Obj-c library for easy version comparisons
-===================================================================
+NEVersionCompare
+================
+
+A tiny Obj-c library for easy version comparisons.
+Current version: *1.0.0*
 
 Setup 
 -----
 
 1. Drag&drop the NEVersionCompare folder to your XCode project  
-2. Import the .h file using: #import "NEVersionCompare.h"
+2. Import the .h file using: *#import "NEVersionCompare.h"*
 
 You're done!
 
@@ -14,7 +17,7 @@ Typical Usage
 
 This is how you create a typical NEVersionCompare object:
 
-NEVersionCompare *myVersion = [[NEVersionCompare alloc] initWithFullTextVersion:@"1.0.3.550"];
+	NEVersionCompare *myVersion = [[NEVersionCompare alloc] initWithFullTextVersion:@"1.0.3.550"];
 
 Advanced Use Case on iOS project
 --------------------------------
@@ -76,13 +79,14 @@ Advanced Use Case on iOS project
 	    }
 	}
 
+
 Supported Patterns
 ------------------
 
 Pretty much all patterns are supported, except that you have to use periods (".") as a separator
 Like:
-XXX 
-XXX.XXX
-XXX.XXX.XX
-XXX.XXX.XXX.XXX
-XXX.Whateverwillnotbetakenintoaccountanyway
+*	XXX 
+*	XXX.XXX
+* 	XXX.XXX.XX
+*	XXX.XXX.XXX.XXX
+*	XXX.Whateverwillnotbetakenintoaccountanyway
