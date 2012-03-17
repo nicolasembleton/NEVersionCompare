@@ -1,10 +1,29 @@
-/**
- License: S-GPL
- */
+NEVersionCompare, A tiny Obj-c library for easy version comparisons
+===================================================================
+
+Setup 
+-----
+
+1. Drag&drop the NEVersionCompare folder to your XCode project  
+2. Import the .h file using: #import "NEVersionCompare.h"
+
+You're done!
+
+Typical Usage
+-------------
+
+This is how you create a typical NEVersionCompare object:
+
+NEVersionCompare *myVersion = [[NEVersionCompare alloc] initWithFullTextVersion:@"1.0.3.550"];
+
+Advanced Use Case on iOS project
+--------------------------------
+
+### Popup an Alert View to your iOS app user when you release a new version and redirect them to the AppStore
 
 // Use Case: Test version at application opening time
 // File: AppDelegate.m
-// Note: Don't forget in AppDelegate.h to add #import "NEVersionCompare.h"
+// Requirement: Your class has to register to UIAlertViewDelegate by using <UIAlertViewDelegate>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 /*  Test cases //
@@ -55,3 +74,14 @@
         [[UIApplication sharedApplication] openURL:appStore];
     }
 }
+
+Supported Patterns
+------------------
+
+Pretty much all patterns are supported, except that you have to use periods (".") as a separator
+Like:
+XXX 
+XXX.XXX
+XXX.XXX.XX
+XXX.XXX.XXX.XXX
+XXX.Whateverwillnotbetakenintoaccountanyway
